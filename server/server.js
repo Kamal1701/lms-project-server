@@ -18,7 +18,7 @@ app.use(express.json());
 // Routers
 
 app.get("/", (req, res) => res.send("Api Working"));
-app.post("/clerk", clerkWebhooks);
+app.post("/clerk", express.json(), clerkWebhooks);
 
 // Port
 const PORT = process.env.PORT || 5000;

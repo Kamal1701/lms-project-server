@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const Course = require("../models/Course");
 const Purchase = require("../models/Purchase");
 const Stripe = require("stripe");
 

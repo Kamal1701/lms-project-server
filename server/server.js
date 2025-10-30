@@ -17,6 +17,7 @@ connectCloudinary();
 
 // Middleware
 app.use(cors());
+app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
 app.use(express.json());
 app.use(clerkMiddleware());
 
@@ -28,7 +29,6 @@ app.post("/clerk", express.json(), clerkWebhooks);
 app.use("/api/educator", require("./routes/educatorRoutes"));
 app.use("/api/course", require("./routes/courseRoutes"));
 app.use("/api/user", require("./routes/userRoutes"));
-app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
 
 // Port
 // Port

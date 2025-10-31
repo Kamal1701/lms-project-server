@@ -1,7 +1,8 @@
 // import { clerkClient } from "@clerk/express";
-const { clerkClient, User } = require("@clerk/express");
+const { clerkClient } = require("@clerk/express");
 const Course = require("../models/Course");
 const Purchase = require("../models/Purchase");
+const User = require("../models/User");
 const cloudinary = require("cloudinary").v2;
 // export const updateRoleToEducator = async () => {
 const updateRoleToEducator = async (req, res) => {
